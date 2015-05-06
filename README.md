@@ -100,7 +100,7 @@ class ApplicationController < ActionController::Base # or ActionController::API
   acts_as_token_authentication_handler_for User
 
   # Security note: controllers with no-CSRF protection must disable the Devise fallback,
-  # see #49 for details.
+  # see [#49][csrf] for details.
   # acts_as_token_authentication_handler_for User, fallback_to_devise: false
 
   # The token authentication requirement can target specific controller actions:
@@ -131,6 +131,7 @@ class ApplicationController < ActionController::Base # or ActionController::API
   # ...
 end
 ```
+  [csrf]: https://github.com/gonzalo-bulnes/simple_token_authentication/issues/49
 
 Configuration
 -------------
